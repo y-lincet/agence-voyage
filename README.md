@@ -41,6 +41,6 @@ agence/
 
 Aucune compilation ni installation de dépendances n'est requise :
 
-1. Extraire l'archive `agence.zip` sur votre poste de travail
+1. Cloner ou télécharger ce dépôt
 2. Ouvrir le dossier `agence/`
-3. Lancer `index.html` directement dans ton navigateur, ou sers le dossier via un serveur local (ex. *Live Server* sur VS Code ou `python -m http.server`)
+3. Lancer `index.html` directement dans votre navigateur, ou sers le dossier via un serveur local
