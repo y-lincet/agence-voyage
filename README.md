@@ -1,4 +1,4 @@
-# Agence de Voyage — Site Vitrine
+# Agence de Voyage - Site Vitrine
 
 Site vitrine web statique présentant une agence de voyage, ses destinations, ses circuits thématiques et son parcours d'accompagnement client.
 
@@ -32,13 +32,13 @@ agence/
 │   └── toscane.jpeg
 ├── js/
 │   └── main.js
-└── index.html
-└── README.md
+├── index.html
+├── README.md
 
 ## Installation et exécution en local
 
 Aucune compilation ni installation de dépendances n'est requise :
 
-1. Extrais l'archive `agence.zip` sur ton poste.
-2. Ouvre le dossier `agence/`.
-3. Lance `index.html` directement dans ton navigateur, ou sers le dossier via un serveur local (ex. *Live Server* sur VS Code ou `python -m http.server`).
+1. Extraire l'archive `agence.zip` sur votre poste de travail
+2. Ouvrir le dossier `agence/`
+3. Lancer `index.html` directement dans ton navigateur, ou sers le dossier via un serveur local (ex. *Live Server* sur VS Code ou `python -m http.server`)
