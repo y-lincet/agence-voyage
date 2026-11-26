@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel Agency. – Voyages sur mesure</title>
+  <meta name="description" content="Travel Agency : organisez votre voyage sur mesure, en famille ou entre amis. Destinations, circuits et conseillers experts pour un séjour sans souci.">
+  <meta name="theme-color" content="#ff7a00">
+  <meta property="og:title" content="Travel Agency. – Voyages sur mesure">
+  <meta property="og:description" content="Planifiez, organisez, voyagez : des séjours et circuits conçus selon vos envies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.avif">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ff7a00'/%3E%3Cpath d='M20 58 78 30 66 74 49 60 40 78 38 56z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="header" id="header">
+    <div class="wrapper header-in">
+      <a href="#accueil" class="logo" aria-label="Travel Agency, accueil">Travel Agency<span class="orange">.</span></a>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil" data-spy="accueil">Accueil</a></li>
+          <li><a href="#destinations" data-spy="destinations">Destinations</a></li>
+          <li><a href="#circuits" data-spy="circuits">Circuits</a></li>
+          <li><a href="#pourquoi" data-spy="pourquoi">Nos atouts</a></li>
+          <li><a href="#contact" data-spy="contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-orange">Demander un devis</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- Hero et barre de recherche rapide -->
+    <section class="hero" id="accueil">
+      <div class="wrapper hero-in">
+        <p class="eyebrow">Agence de voyages</p>
+        <h1>Organisez votre <br><strong>voyage sur mesure</strong></h1>
+        <p class="hero-sub">Confiez-nous vos envies d'évasion : nous concevons un séjour qui vous ressemble, de la première idée jusqu'au retour.</p>
+        <div class="hero-actions">
+          <a href="#destinations" class="btn btn-orange btn-lg">Découvrir les destinations</a>
+          <a href="#contact" class="btn btn-glass btn-lg">Demander un devis</a>
+        </div>
+
+        <form class="quick" id="quick" aria-label="Recherche rapide">
+          <label class="q-field"><span>Destination</span>
+            <select id="q-dest"><option value="">Toutes les destinations</option></select>
+          </label>
+          <label class="q-field"><span>Départ</span>
+            <input type="date" id="q-date">
+          </label>
+          <label class="q-field"><span>Voyageurs</span>
+            <input type="number" id="q-pax" min="1" max="20" value="2" inputmode="numeric">
+          </label>
+          <button type="submit" class="btn btn-cyan">Rechercher</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Fonctionnement en 3 étapes -->
+    <section class="steps" id="steps">
+      <div class="wrapper">
+        <div class="section-head center reveal">
+          <p class="eyebrow dark">Comment ça marche</p>
+          <h2>Votre voyage en trois étapes</h2>
+        </div>
+        <ol class="steps-list">
+          <li class="step reveal">
+            <span class="step-n">1</span>
+            <span class="step-icon"><img src="images/step-planifier.png" alt="" width="64" height="64"></span>
+            <h3>Planifier</h3>
+            <p>Confiez-nous vos rêves d'évasion : en famille ou entre amis, nous trouverons la formule qui comblera vos attentes.</p>
+          </li>
+          <li class="step reveal" style="--d:.12s">
+            <span class="step-n">2</span>
+            <span class="step-icon"><img src="images/step-organiser.png" alt="" width="64" height="64"></span>
+            <h3>Organiser</h3>
+            <p>Bénéficiez de l'expertise de nos spécialistes de chaque destination : ils vous accompagnent dans la réalisation de vos voyages.</p>
+          </li>
+          <li class="step reveal" style="--d:.24s">
+            <span class="step-n">3</span>
+            <span class="step-icon"><img src="images/step-voyager.png" alt="" width="64" height="64"></span>
+            <h3>Voyager</h3>
+            <p>Nous nous chargeons d'assurer votre sécurité et de veiller à votre sérénité tout au long de votre voyage.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Catalogue des destinations (rempli dynamiquement par main.js) -->
+    <section class="destinations" id="destinations">
+      <div class="wrapper">
+        <div class="section-head reveal">
+          <p class="eyebrow dark">Inspirations</p>
+          <h2>Nos destinations coup de cœur</h2>
+          <p class="lead">Un avant-goût de ce que nous pouvons organiser pour vous. Chaque séjour est entièrement personnalisable.</p>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filtrer les destinations"></div>
+        <p class="result-line" id="dest-count" aria-live="polite"></p>
+        <div class="dest-grid" id="dest-grid"></div>
+        <p class="note">Tarifs indicatifs par personne, à partir de, hors vols selon la période. Demandez un devis personnalisé.</p>
+      </div>
+    </section>
+
+    <!-- Formules de circuits -->
+    <section class="circuits" id="circuits">
+      <div class="wrapper">
+        <div class="section-head center reveal">
+          <p class="eyebrow dark">Nos formules</p>
+          <h2>Des circuits pour chaque envie</h2>
+        </div>
+        <div class="circuit-grid">
+          <article class="circuit reveal" style="background-image:url(images/circuit-famille.png)">
+            <div class="overlay">
+              <h3>Partez en <br>famille</h3>
+              <p><small><em>Offrez le meilleur à ceux que vous aimez et partagez des moments fabuleux !</em></small></p>
+              <button class="btn btn-orange btn-sm" data-circuit="famille">Plus d'infos</button>
+            </div>
+          </article>
+          <article class="circuit reveal" style="background-image:url(images/circuit-evasion.jpg);--d:.12s">
+            <div class="overlay">
+              <h3>Envie de <br>s'évader</h3>
+              <p><small><em>Parfois un peu d'évasion est le bienvenu et fait le plus grand bien !</em></small></p>
+              <button class="btn btn-orange btn-sm" data-circuit="evasion">Plus d'infos</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagements de l'agence -->
+    <section class="why" id="pourquoi">
+      <div class="wrapper">
+        <div class="section-head center reveal">
+          <p class="eyebrow dark">Pourquoi nous choisir</p>
+          <h2>Voyager l'esprit tranquille</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal"><span class="ico" aria-hidden="true">✦</span><h3>100 % sur mesure</h3><p>Chaque projet est construit autour de vos attentes, de votre rythme et de votre budget.</p></div>
+          <div class="why-item reveal" style="--d:.08s"><span class="ico" aria-hidden="true">⚑</span><h3>Experts locaux</h3><p>Des spécialistes de chaque destination pour des conseils précis et des adresses fiables.</p></div>
+          <div class="why-item reveal" style="--d:.16s"><span class="ico" aria-hidden="true">☂</span><h3>Sécurité & sérénité</h3><p>Nous veillons sur votre séjour de la préparation jusqu'au retour.</p></div>
+          <div class="why-item reveal" style="--d:.24s"><span class="ico" aria-hidden="true">€</span><h3>Budget maîtrisé</h3><p>Voyager est un engagement financier important : nous restons transparents sur chaque poste.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions fréquentes -->
+    <section class="faq" id="faq">
+      <div class="wrapper narrow">
+        <div class="section-head center reveal">
+          <p class="eyebrow dark">Questions fréquentes</p>
+          <h2>Vous vous demandez…</h2>
+        </div>
+        <div class="reveal">
+          <details>
+            <summary>Comment organiser un voyage avec vous ?</summary>
+            <p>Remplissez le formulaire de contact en décrivant vos envies. Un conseiller échange avec vous pour affiner le projet, puis vous propose un voyage sur mesure.</p>
+          </details>
+          <details>
+            <summary>Pouvez-vous organiser un voyage en famille ou en groupe ?</summary>
+            <p>Oui, nous concevons aussi bien des séjours en famille que des voyages entre amis, en adaptant le rythme et les activités à chacun.</p>
+          </details>
+          <details>
+            <summary>Puis-je modifier mon projet après la première proposition ?</summary>
+            <p>Bien sûr. La proposition est une base de travail : nous ajustons les dates, les étapes ou le budget avec vous jusqu'à ce qu'elle vous convienne.</p>
+          </details>
+          <details>
+            <summary>Quelles informations dois-je préparer pour un devis ?</summary>
+            <p>Idéalement la destination envisagée, la période, le nombre de voyageurs et votre budget approximatif. Mais n'hésitez pas à nous écrire même sans idée précise.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact et formulaire de devis -->
+    <section class="contact" id="contact">
+      <div class="wrapper contact-grid">
+        <div class="contact-text reveal">
+          <p class="eyebrow dark">Contact</p>
+          <h2>Contactez-nous</h2>
+          <p>Chez Travel Agency, nous savons que voyager est une aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
+          <ul class="contact-list">
+            <li><span class="ci" aria-hidden="true">✉</span><a href="#" id="c-mail"></a></li>
+            <li><span class="ci" aria-hidden="true">✆</span><a href="#" id="c-tel"></a></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate style="--d:.1s">
+          <div class="success" id="form-success" hidden>
+            <span class="check" aria-hidden="true">✓</span>
+            <h3>Merci, votre demande a bien été enregistrée !</h3>
+            <p id="success-msg"></p>
+            <button type="button" class="btn btn-orange" id="form-again">Envoyer une autre demande</button>
+          </div>
+          <div id="form-body">
+            <div class="row">
+              <div class="field"><label for="f-name">Nom</label><input id="f-name" name="nom" type="text" placeholder="Votre nom" autocomplete="name" required><span class="err">Indiquez votre nom.</span></div>
+              <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="vous@exemple.com" autocomplete="email" required><span class="err">Indiquez une adresse email valide.</span></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="f-tel">Téléphone <small>(facultatif)</small></label><input id="f-tel" name="telephone" type="tel" placeholder="06 12 34 56 78" autocomplete="tel"></div>
+              <div class="field"><label for="f-dest">Destination ou formule</label><select id="f-dest" name="destination"><option value="">Je ne sais pas encore</option></select></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="f-date">Date de départ souhaitée</label><input id="f-date" name="depart" type="date"></div>
+              <div class="field"><label for="f-pax">Voyageurs</label><input id="f-pax" name="voyageurs" type="number" min="1" max="20" value="2" inputmode="numeric"></div>
+            </div>
+            <div class="field"><label for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="4" placeholder="Parlez-nous de vos envies, de votre budget, de vos contraintes…"></textarea></div>
+            <!-- Champ piège anti-spam laissé vide par les vrais visiteurs -->
+            <input type="text" name="_gotcha" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+            <label class="consent"><input type="checkbox" id="f-consent" required><span>J'accepte que mes informations soient utilisées pour répondre à ma demande.</span></label>
+            <span class="err" id="consent-err">Merci de cocher cette case pour continuer.</span>
+            <button type="submit" class="btn btn-cyan btn-lg" id="f-submit">Envoyer ma demande</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper footer-in">
+      <div>
+        <a href="#accueil" class="logo light">Travel Agency<span class="orange">.</span></a>
+        <p class="footer-tag">Des voyages sur mesure, pensés pour vous.</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#circuits">Circuits</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="wrapper copyright">Copyright © 2024 Travel Agency. Tous droits réservés.</div>
+  </footer>
+
+  <button class="to-top" id="to-top" aria-label="Retour en haut" hidden>↑</button>
+
+  <!-- Modale de détail pour les circuits -->
+  <dialog class="modal" id="modal" aria-labelledby="modal-title">
+    <div class="modal-in">
+      <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+      <img id="modal-img" alt="" width="460" height="270">
+      <div class="modal-body">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <ul class="ticks" id="modal-list"></ul>
+        <div class="modal-foot"><span id="modal-meta"></span><button class="btn btn-orange" id="modal-cta">Demander ce circuit</button></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
