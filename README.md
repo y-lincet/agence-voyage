@@ -12,6 +12,7 @@ Ce projet met en avant l'univers d'une agence de voyage à travers une interface
 
 ## Structure du projet
 
+```
 agence/
 ├── css/
 │   └── style.css
@@ -34,6 +35,7 @@ agence/
 │   └── main.js
 ├── index.html
 ├── README.md
+```
 
 ## Installation et exécution en local
 
