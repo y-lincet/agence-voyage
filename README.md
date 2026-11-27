@@ -1,46 +1,39 @@
-# Agence de Voyage - Site Vitrine
+# ✈️ Travel Agency. - Voyages sur mesure
 
-Site vitrine web statique présentant une agence de voyage, ses destinations, ses circuits thématiques et son parcours d'accompagnement client.
+Site vitrine interactif pour une agence de voyages sur mesure permettant d'explorer des destinations, filtrer des séjours, découvrir des formules de circuits et envoyer une demande de devis.
 
-## Aperçu du projet
+## ✨ Fonctionnalités
 
-Ce projet met en avant l'univers d'une agence de voyage à travers une interface web légère et structurée :
-- **Page d'accueil (`index.html`)** avec section d'introduction (*hero*) et mise en scène des offres.
-- **Destinations & circuits** illustrés par une galerie visuelle variée (Bali, Islande, Lisbonne, Maldives, Marrakech, Santorin, Tokyo, Toscane, ainsi que des circuits *Évasion* et *Famille*).
-- **Parcours utilisateur en 3 étapes** : *Organiser*, *Planifier* et *Voyager*.
-- **Styles & interactions** gérés nativement en CSS (`css/style.css`) et JavaScript (`js/main.js`), sans dépendance lourde.
+- **Navigation dynamique** : en-tête fixe qui se compacte au défilement, mise en surbrillance automatique de la section active (*scroll spy*) et menu burger plein écran sur mobile.
+- **Recherche rapide** : sélection d'une destination, d'une date de départ et du nombre de voyageurs depuis le hero, avec transfert des informations vers le formulaire de contact.
+- **Catalogue filtrable** : génération dynamique des 8 destinations depuis `js/main.js`, filtrage par thématique (*Plage, Culture, Ville, Aventure*) et compteur de résultats.
+- **Modale de circuits** : affichage des formules (*Famille* et *Évasion*) dans une fenêtre `<dialog>` native.
+- **Formulaire de contact** : pré-remplissage automatique depuis les destinations ou les circuits, validation côté client (nom, email, consentement), champ anti-spam (*honeypot*) et message de confirmation personnalisé *(traitement 100 % front-end, sans envoi serveur)*.
+- **Accessibilité** : lien d'évitement, attributs ARIA, chargement différé des images (`loading="lazy"`) et prise en compte de `prefers-reduced-motion`.
 
-## Structure du projet
+## 🗂️ Structure du projet
 
 ```
-agence/
+agence-voyage/
 ├── css/
 │   └── style.css
 ├── images/
-│   ├── bali.jpeg
-│   ├── circuit-evasion.jpg
-│   ├── circuit-famille.png
-│   ├── hero.avif
-│   ├── islande.jpg
-│   ├── lisbonne.png
-│   ├── maldives.jpg
-│   ├── marrakech.jpg
-│   ├── santorin.avif
-│   ├── step-organiser.png
-│   ├── step-planifier.png
-│   ├── step-voyager.png
-│   ├── tokyo.jpg
-│   └── toscane.jpeg
 ├── js/
 │   └── main.js
 ├── index.html
-├── README.md
+└── README.md
 ```
 
-## Installation et exécution en local
+## 🚀 Exécution en local
 
-Aucune compilation ni installation de dépendances n'est requise :
+Aucune installation ou compilation n'est nécessaire :
 
-1. Cloner ou télécharger ce dépôt
-2. Ouvrir le dossier `agence/`
-3. Lancer `index.html` directement dans votre navigateur, ou sers le dossier via un serveur local
+1. Cloner ou télécharger le dépôt
+2. Ouvrer `index.html` dans le navigateur web (ou lance un serveur local comme *Live Server* dans VS Code)
+
+## 🛠️ Technologies utilisées
+
+- **HTML5** (balisage sémantique, `<dialog>`, `<details>`)
+- **CSS3** (variables CSS, Grid, Flexbox, requêtes médias, `prefers-reduced-motion`)
+- **JavaScript natif (Vanilla JS)** (`IntersectionObserver`, manipulation du DOM, validation de formulaire)
+- **Google Fonts** (*Fraunces*, *Plus Jakarta Sans*)
