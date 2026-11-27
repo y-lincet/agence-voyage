@@ -33,7 +33,7 @@ Aucune installation ou compilation n'est nécessaire :
 
 ## 🛠️ Technologies utilisées
 
-- **HTML5** (balisage sémantique, `<dialog>`, `<details>`)
-- **CSS3** (variables CSS, Grid, Flexbox, requêtes médias, `prefers-reduced-motion`)
-- **JavaScript natif (Vanilla JS)** (`IntersectionObserver`, manipulation du DOM, validation de formulaire)
-- **Google Fonts** (*Fraunces*, *Plus Jakarta Sans*)
+- **HTML5**
+- **CSS3**
+- **JavaScript natif (Vanilla JS)**
+- **Google Fonts**
